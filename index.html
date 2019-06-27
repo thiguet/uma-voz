@@ -1,98 +1,67 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>Uma Voz</title>
-		<link rel="stylesheet" href="css/poesia.css" >
-		<script type="text/javascript" src="js/poesia.js"></script>
-	</head>
+    <head>
+        <title>Uma Voz</title>
+        
+        <meta charset="utf-8"/>
+        <meta name="lang" content="pt-BR"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<body>
-		<div class = "container">
-			<div class = "title">
-				<span class="title-text">Não há nada aqui</span>
-			</div>
-			<div class="container">
-				<div class="top ">
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
-					
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
+        <!-- Bootstrap's Files -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
+        <!-- Uma Voz Files -->
+        <link rel="stylesheet" href="css/poesia.css">
+        <script src="js/poesia.js"></script>
+    
+        <!-- Google API Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Acme|Audiowide|Concert+One|Dosis|Fredoka+One|Gloria+Hallelujah|Hammersmith+One|Handlee|Inconsolata|Indie+Flower|Josefin+Sans|Julius+Sans+One|Montserrat|Pacifico|Poiret+One|Questrial|Righteous|Sacramento|Shadows+Into+Light|Shrikhand|Ubuntu|Work+Sans" rel="stylesheet">
+    </head>
 
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
+    <body>
+        <header>
+            <!--
+            <nav class="navbar navbar-expand-sm bg-white">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+                </ul>
+            </nav> -->
+        </header>
 
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
-
-					<a href="#"> 
-						<div class= "box box-top">
-							<span class="box-text box-top-text">Um título</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="middle">
-					<div class="middle-left">
-						<a href="#"> 
-							<div class= "box box-left">
-								<span class="box-text box-left-text">Um título ai</span>
-							</div>
-						</a>
-					</div>
-					<div class="middle-right">
-						<a href="#"> 
-							<div class= "box box-right">
-								<span class="box-text box-right-text">Um título ai</span>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="bottom">
-					
-				</div>
-			</div>
-		</div>
-
-		<footer>
-			<div class = "footer-content">
-				<span class="footer-text">Uma voz</span>
-				<form>
-					<ul class="margin-left">
-						<li><div id="black" class="circle black checked"></div></li>
-						<li><div id="lightblue" class="circle lightblue"></div></li>
-						<li><div id="pink" class="circle pink"></div></li>
-						<li><div id="lightgreen" class="circle lightgreen"></div></li>
-					</ul>
-				</form>
-			</div>	
-		</footer>
-
-		<div id="background" class="underContainer"></div>
-
-		<div id="filter" class="overContainer" onclick="hideFilter(this);" >
-			<div class = "showMessage">
-				<div></div>
-			</div>
-		</div>
-	</body>
+        <main>
+            <section>
+                <article>
+                    <div id="titulo" class="container text-center margin-top-280">
+                        <h1 data-toggle="collapse" data-target="#formContainer">Uma Voz</h1>
+                    </div>
+                </article>
+           </section>
+ 
+            <section>
+                <div id="formContainer" class="container-fluid collapse color-333">
+                    <div class="" id="formy">  
+                        <div class="form-group">
+                            <label>Nome:</label>
+                            <input class="form-control" id="name" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label>E-Mail:</label>
+                            <input class="form-control" id="email" name="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Senha:</label>
+                            <input class="form-control" id="email" name="email"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="submit" name="enviar"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
