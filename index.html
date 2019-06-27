@@ -1,67 +1,89 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Uma Voz</title>
-        
-        <meta charset="utf-8"/>
-        <meta name="lang" content="pt-BR"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width = device-width, initial-scale=1.0">
+		<title>Uma Voz</title>
+		<link rel="stylesheet" href="css/poesia.css" >
+		<script type="text/javascript" src="js/poesia.js"></script>
+	</head>
 
-        <!-- Bootstrap's Files -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<body>
+		<div class = "container">
+			<div class = "title">
+				<span class="title-text">Eu</span>
+			</div>
+			<div class="container">
+				<div class="top ">
+					<div class= "box box-top box-top-left">
+						<span class="box-text box-top-text">Um título</span>
+					</div>
 
-        <!-- Uma Voz Files -->
-        <link rel="stylesheet" href="css/poesia.css">
-        <script src="js/poesia.js"></script>
-    
-        <!-- Google API Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Acme|Audiowide|Concert+One|Dosis|Fredoka+One|Gloria+Hallelujah|Hammersmith+One|Handlee|Inconsolata|Indie+Flower|Josefin+Sans|Julius+Sans+One|Montserrat|Pacifico|Poiret+One|Questrial|Righteous|Sacramento|Shadows+Into+Light|Shrikhand|Ubuntu|Work+Sans" rel="stylesheet">
-    </head>
+					<div class= "box box-top box-top-center">
+						<span class="box-text box-top-text">Um título</span>
+					</div>
 
-    <body>
-        <header>
-            <!--
-            <nav class="navbar navbar-expand-sm bg-white">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
-                </ul>
-            </nav> -->
-        </header>
+					<div class= "box box-top box-top-right">
+						<span class="box-text box-top-text">Um título</span>
+					</div>
+				</div>
 
-        <main>
-            <section>
-                <article>
-                    <div id="titulo" class="container text-center margin-top-280">
-                        <h1 data-toggle="collapse" data-target="#formContainer">Uma Voz</h1>
-                    </div>
-                </article>
-           </section>
- 
-            <section>
-                <div id="formContainer" class="container-fluid collapse color-333">
-                    <div class="" id="formy">  
-                        <div class="form-group">
-                            <label>Nome:</label>
-                            <input class="form-control" id="name" name="name"/>
-                        </div>
-                        <div class="form-group">
-                            <label>E-Mail:</label>
-                            <input class="form-control" id="email" name="email"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Senha:</label>
-                            <input class="form-control" id="email" name="email"/>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" type="submit" name="enviar"/>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
+				<div class="middle">
+					<div class= "middle-left">
+						<div class= "box box-left">
+							<span class="box-text box-left-text">Um título</span>
+						</div>
+						<div class= "box box-left">
+							<span class="box-text box-left-text">Um título</span>
+						</div>
+						<div class= "box box-left">
+							<span class="box-text box-left-text">Um título</span>
+						</div>
+					</div>
+					
+					<div class= "middle-right">
+						<div class= "box box-right">
+							<span class="box-text box-right-text">Um título</span>
+						</div>
+						<div class= "box box-right">
+							<span class="box-text box-right-text">Um título</span>
+						</div>
+						<div class= "box box-right">
+							<span class="box-text box-right-text">Um título</span>
+						</div>
+					</div>
+
+				</div>
+				<footer>
+					<div class = "footer-content">
+						<div class="container">	
+							<span class="footer-text">Uma voz</span> 
+						</div>
+						<div class="container">
+							<div id="black" class="rectangle black"></div>
+							<div id="lightblue" class="rectangle lightblue"></div>
+							<div id="orange" class="rectangle orange"></div>
+							<div id="lightgreen" class="rectangle lightgreen"></div>
+						</div>		
+					</div>	
+				</footer>
+			</div>
+		</div>
+
+		<div id="background" class="underContainer"></div>
+
+		<div id="filter" class="overContainer" onclick="hideFilter(this);" >
+			<div class = "showMessage">
+				<div class = "middle-left">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class = "middle-right">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
