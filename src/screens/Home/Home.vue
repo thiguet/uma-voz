@@ -1,6 +1,6 @@
 <template>
     <div class="home-container">
-        <my-span :label="label" fontSize="30px" />
+        <my-span :label="label"/>
     </div>    
 </template>
 
@@ -25,12 +25,14 @@ export default {
 
 <style>
     .home-container {
-        padding: 250px 100px;
+        color: #A53860;
+        margin-top: 70px;
+        padding: 20px 0px;
     }
 
-    @media (max-width: 600px) {
+    @media (min-height: 400px) {
         .home-container {
-            padding: 300px 100px;
-        }
+            margin-top: 170px;
+        }    
     }
 </style>
