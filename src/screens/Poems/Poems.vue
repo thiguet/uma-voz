@@ -3,12 +3,11 @@
         <table class="poems-table" :key="itemsPerRow">
             <thead></thead>
             <tbody>
-                <tr v-for="(groupedPoems, i) in getPoemsLines()"
+                <tr v-for="(poem, i) in poems"
                     :key="i">
-                    <td v-for="(poem, j) in groupedPoems"
-                        :key ="j" >
-                        <router-link class="poem-link" :to="'/poem/' + poem.name">
-                            {{ poem.label }}
+                    <td>
+                        <router-link class="poem-link" :to="'/poem/' + poem.title">
+                            {{ poem.title }}
                         </router-link>
                     </td>
                 </tr>
@@ -18,7 +17,10 @@
 </template>
 
 <script>
-import { poems } from './poemsData.js';
+import { getPoems } from '@/screens/Poems/PoemsController.js';
+import { init } from "@/services/FirebaseService.js";
+
+init();
 
 export default {
     name : "poems",
@@ -29,25 +31,14 @@ export default {
     },
     data () {
         return ({
-            poems
+            poems: []
         });
     },
-    methods: {
-        getPoemsLines() {
-            let rows = [];
-            const poemsAux = this.poems; 
-
-            for(let i = 0 ; i < this.poems.length ; i++ ) {
-                rows.push(
-                    poemsAux.slice(
-                        i * this.itemsPerRow, 
-                        (i + 1) * this.itemsPerRow 
-                    )
-                );
-            }
-
-            return rows;
-        }
+    created() {
+        getPoems(snap => {
+            const poems = Object.values(snap.val());
+            this.poems = poems;
+        });
     }
 }
 </script>

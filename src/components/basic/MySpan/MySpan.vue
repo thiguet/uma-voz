@@ -34,6 +34,9 @@ export default {
   font-weight: 500;
 }
 
+.span-container span:nth-child(1) {
+    animation-delay: 0.4s;
+}
 .span-container span:nth-child(2) {
     animation-delay: 0.5s;
 }

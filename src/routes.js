@@ -2,6 +2,7 @@ import Home from "@/screens/Home/Home.vue";
 import About from "@/screens/About/About.vue";
 import Poems from "@/screens/Poems/Poems.vue";
 import PoemDisplay from "@/screens/PoemDisplay/PoemDisplay.vue";
+import AddPoem from "@/screens/AddPoem/AddPoem.vue";
 
 const routes = [
     { 
@@ -35,6 +36,13 @@ const routes = [
         component: PoemDisplay,
         name: "poem",
         isVisible: false
+    }    ,
+    {
+        path: '/add-poem', 
+        component: AddPoem,
+        name: "add-poem",
+        label: 'Add New Poem',
+        isVisible: true
     }    
 ];
 
