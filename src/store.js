@@ -8,11 +8,11 @@ export const store = new Vuex.Store({
         poems: []
     },
     mutations: {
-        getPoems(state, poems) {
+        setPoems(state, poems) {
             state.poems = poems;
         }
     },
     getters: {
-        poems: state => state.poems
+        poems: state => state.poems,
     }
 });

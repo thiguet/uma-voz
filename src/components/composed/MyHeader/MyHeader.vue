@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header class="my-header">
         <my-navbar :routes="routes"></my-navbar>
     </header>
 </template>
@@ -22,13 +22,9 @@ export default {
 </script>
 
 <style scoped>
-    .header {
+    .my-header {
         position: relative;
         padding: 30px 0px;
         width: 100%;
-    }
-
-    ul {
-        padding-inline-start: inherit;
     }
 </style>

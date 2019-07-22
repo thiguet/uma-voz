@@ -37,14 +37,14 @@ export default {
             poems: []
         });
     },
-    beforeCreate() {
+    created() {
         getPoems(snap => {
             const poems = 
                 Object.keys(snap.val())
                       .map(key => 
                           Object.assign({'id': key}, snap.val()[key])
                       );
-            this.$store.commit('getPoems', poems);
+            this.$store.commit('setPoems', poems);
         });
     }
 }
@@ -95,5 +95,6 @@ export default {
             padding: 40px 0px;
         }        
     }
+
 
 </style>

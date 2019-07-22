@@ -6,7 +6,7 @@ import AddPoem from "@/screens/AddPoem/AddPoem.vue";
 
 const routes = [
     { 
-        path: '/home', 
+        path: '/', 
         component: Home,
         name: "home",
         label: "Início",

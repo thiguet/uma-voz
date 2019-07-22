@@ -8,11 +8,12 @@
 </template>
 
 <script>
-import MyHeader from "@/components/composed/MyHeader/MyHeader.vue";
+import MyHeader from "@/components/composed/MyHeader/MyHeader.vue"
 import routes from "@/routes.js"
 import { store } from './store.js'
 
-const visibleRoutes = routes.filter(route => route.isVisible);
+const visibleRoutes = 
+    routes.filter(route => route.isVisible);
 
 export default {
   name: "App",
