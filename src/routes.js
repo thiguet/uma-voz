@@ -13,6 +13,13 @@ const routes = [
         isVisible: true
     },
     { 
+        path: '/uma-voz', 
+        component: Home,
+        name: "home",
+        label: "Início",
+        isVisible: false
+    },
+    { 
         path: '/about', 
         component: About,
         name: "about",
