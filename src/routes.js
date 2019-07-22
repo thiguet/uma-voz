@@ -9,7 +9,7 @@ const routes = [
         path: '/home', 
         component: Home,
         name: "home",
-        label: "Home",
+        label: "Início",
         isVisible: true
     },
     { 
@@ -22,13 +22,13 @@ const routes = [
     { 
         path: '/poems', 
         component: Poems,
+        name: "poems",
+        label: "Poemas",
         props: {
             default: true,
             itemsPerRow: window.document.body.offsetWidth > 600 ? 3
                           : 1
         },
-        name: "poems",
-        label: "Poemas",
         isVisible: true
     },
     {
@@ -41,8 +41,8 @@ const routes = [
         path: '/add-poem', 
         component: AddPoem,
         name: "add-poem",
-        label: 'Add New Poem',
-        isVisible: true
+        label: 'New Poem',
+        isVisible: false
     }    
 ];
 

@@ -26,13 +26,15 @@ export default {
 <style>
     .home-container {
         color: #A53860;
-        margin-top: 70px;
+        margin-top: 10%;
         padding: 20px 0px;
     }
-
-    @media (min-height: 400px) {
+    
+    @media (max-height: 640px) {
         .home-container {
-            margin-top: 170px;
+            margin-top: 25%;
         }    
     }
+
+    
 </style>

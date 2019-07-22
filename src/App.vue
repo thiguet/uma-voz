@@ -10,11 +10,13 @@
 <script>
 import MyHeader from "@/components/composed/MyHeader/MyHeader.vue";
 import routes from "@/routes.js"
+import { store } from './store.js'
 
 const visibleRoutes = routes.filter(route => route.isVisible);
 
 export default {
   name: "App",
+  store,
   components: {
     MyHeader
   },
@@ -39,6 +41,12 @@ export default {
     background-color:#F9DBBD;
     overflow-x:hidden;
     overflow-y: overlay;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 
   #app {

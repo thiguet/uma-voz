@@ -1,5 +1,6 @@
+<!-- mb stands for my button -->
 <template>
-    <button class="button" v-on:click="onClick">
+    <button class="mb-input" v-on:click="onClick">
         {{ label }}
     </button>    
 </template>
@@ -18,7 +19,7 @@ export default {
 </script>
 
 <style>
-    .button {
+    .mb-input {
         color: #dddddd;
         border: none;
         background-color: rgba(0,0,0,0.4);
@@ -29,7 +30,7 @@ export default {
         cursor: pointer;
     }
 
-    .button:hover {
+    .mb-input:hover {
         transform: translateY(4px);
         color: purple;
     }

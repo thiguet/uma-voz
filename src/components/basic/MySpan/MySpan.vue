@@ -1,10 +1,12 @@
-<template>    
+<template>  
+  <article>  
     <div class="span-container">
         <span v-for="(letter, i) in label" 
               :key="i" >
             {{ letter }}
         </span>
     </div>
+  </article>
 </template>
 
 <script>

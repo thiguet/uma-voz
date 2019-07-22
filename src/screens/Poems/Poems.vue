@@ -1,19 +1,22 @@
 <template>
-    <div class="poems-container">
-        <table class="poems-table" :key="itemsPerRow">
-            <thead></thead>
-            <tbody>
-                <tr v-for="(poem, i) in poems"
-                    :key="i">
-                    <td>
-                        <router-link class="poem-link" :to="'/poem/' + poem.title">
-                            {{ poem.title }}
-                        </router-link>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>    
+    <article>
+        <div class="poems-container">
+            <table  class="poems-table" 
+                    :key="itemsPerRow">
+                <thead></thead>
+                <tbody>
+                    <tr v-for="poem in this.$store.getters.poems"
+                        :key="poem.id">
+                        <td>
+                            <router-link class="poem-link" :to="'/poem/' + poem.id">
+                                {{ poem.title }}
+                            </router-link>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>    
 </template>
 
 <script>
@@ -34,10 +37,14 @@ export default {
             poems: []
         });
     },
-    created() {
+    beforeCreate() {
         getPoems(snap => {
-            const poems = Object.values(snap.val());
-            this.poems = poems;
+            const poems = 
+                Object.keys(snap.val())
+                      .map(key => 
+                          Object.assign({'id': key}, snap.val()[key])
+                      );
+            this.$store.commit('getPoems', poems);
         });
     }
 }
@@ -65,11 +72,12 @@ export default {
     .poems-table tbody tr td {
         width: 33%;
         height: 100%;
-        padding: 15% 0px;
+        padding: 30px 0px;
         border-radius: 30px;
         transition: all 0.4s ease-in-out;
         overflow: hidden;
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 600;
         cursor: pointer;
     }
 
@@ -80,6 +88,12 @@ export default {
     .poem-link {
         text-decoration: none;
         color: #ed406f;
+    }
+
+    @media (max-width: 600px) {
+        .poems-table tbody tr td {
+            padding: 40px 0px;
+        }        
     }
 
 </style>

@@ -5,11 +5,12 @@
             <div class="ap-title">
                 <input type="text"
                        v-model="title"
-                       class="ap-input" />
+                       placeholder="Título"
+                       class="ap-text" />
             </div>
             <div class="ap-paragraphs-container">
                 <textarea oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' 
-                    class="ap-ct-textarea" 
+                    class="ap-textarea" 
                     v-on:keyup="addVerse"
                     v-for="(paragraph, i) in paragraphs" 
                     :key="i"
@@ -18,7 +19,7 @@
             </div>
             <div class="ap-footer">
                 <my-button 
-                    label="Add"
+                    label="Add Parágrafo"
                     :onClick="addParagraph">
                 </my-button>
             </div>
@@ -31,6 +32,7 @@
         </div>
     </article>
 </template>
+
 <script>
 import MyButton from "@/components/basic/MyButton/MyButton.vue"; 
 import { addPoem } from "@/screens/AddPoem/AddPoemController.js";
@@ -39,7 +41,7 @@ export default {
     name: 'add-poem',
     data() {
         return ({
-            paragraphs: ['asdasd'],
+            paragraphs: [''],
             title: ''    
         });
     },
@@ -59,19 +61,21 @@ export default {
             }
         },
         savePoem() {
-            const data = {
+            const poemData = {
                 title: this.title,
                 paragraphs: this.paragraphs
             };
 
-            addPoem(data);
+            addPoem(poemData)
+                .then(() => alert('O registro foi salvo com sucesso !'))
+                .catch(() => alert('Um erro ocorreu !'));
         }
     }
 }
 </script>
 
 <style>
-    .ap-ct-textarea {
+    .ap-textarea {
         background: none;
         border: none;
         border-bottom: 1px dotted #ed406f;
@@ -93,7 +97,7 @@ export default {
     .ap-title {
         margin: 0px 0px 30px 0px; 
     }
-    .ap-input {
+    .ap-text {
         border: none;
         border-bottom: 1px solid #ed406f;
         background: none;
@@ -103,5 +107,4 @@ export default {
         width: 100%;
         font-size: 40px;
     }
-
 </style>

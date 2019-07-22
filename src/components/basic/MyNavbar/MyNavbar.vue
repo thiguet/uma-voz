@@ -27,6 +27,7 @@ export default {
 .my-nav ul {
     list-style-type: none;
     margin-left: 0;
+    padding-inline-start: 0px;
 }
 
 .my-nav ul li {
@@ -46,7 +47,6 @@ export default {
 
 .my-nav ul li:hover {
     opacity: 0;
-    text-shadow: 20px 20px 3px;
 }
 
 .nav-items {

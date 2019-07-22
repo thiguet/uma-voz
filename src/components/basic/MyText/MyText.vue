@@ -1,12 +1,13 @@
+<!-- mt stands for my text -->
 <template>
-    <div class="textField" >
-        <div class="label-container">
-            <label class="label"> {{ placeholder }} </label>
+    <div class="mt-container">
+        <div class="mt-label-container">
+            <label class="mt-label"> {{ placeholder }} </label>
         </div>
         <div>
             <input 
                 type="text" 
-                class="input"
+                class="mt-input"
                 v-bind:value="value"
                 v-on:input="$emit('input', $event.target.value)" 
                 :style="style"/>
@@ -38,15 +39,15 @@ export default {
 </script>
 
 <style scoped>
-    .label-container {
+    .mt-label-container {
         text-align: left;
     }
 
-    .label {
+    .mt-label {
         color: inherit;
     }
 
-    .input {
+    .mt-input {
         border: none;
         border-bottom: 1px solid #ed406f;
         background: none;
@@ -56,7 +57,7 @@ export default {
         width: 100%;
     }
 
-    .textField {
+    .mt-container {
         position: relative;
         margin-bottom: 50px;
         width: 100%;
