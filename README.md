@@ -1,4 +1,10 @@
-# hello-app
+# Uma Voz
+
+A repo to maintain Uma Voz app.
+
+## Demo
+
+You can check the app [here](http://thiguet.github.io/uma-voz/dist).
 
 ## Project setup
 ```
@@ -13,11 +19,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
 ```
 
 ### Lints and fixes files
